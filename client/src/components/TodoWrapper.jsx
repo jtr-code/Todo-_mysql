@@ -3,6 +3,7 @@ import axios from "axios";
 // components
 import Todo from "./Todo";
 import TodoForm from "./TodoForm";
+import Login from "./Login";
 
 const TodoWrapper = () => {
   const [todos, setTodos] = useState([]);
@@ -55,7 +56,8 @@ const TodoWrapper = () => {
   };
 
   return (
-    <div className="bg-gray-800 h-screen flex justify-center items-center flex-col">
+    <div className="bg-gray-800 h-screen flex justify-center items-center flex-col relative">
+      <Login />
       <TodoForm addTodo={addTodo} />
       {/* display todos */}
       {todos.map((todo) => (
